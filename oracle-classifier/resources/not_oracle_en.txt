@@ -1,0 +1,103 @@
+- Verify and validate that the system is capable of receiving RG and CNH images, creating a fraud analysis process for each image sent, leaving the image as a process link attachment. At the end of the stream, the system must be able to determine whether or not there is evidence of fraud in the submitted document.
+- Log in to the DSBPM Dashboard
+- Have the test process definition deployed and available in the test environment.
+- The system must correctly process the file, creating a process for each proposal submitted and extracting the data of each proposal to compose variables in the corresponding process.
+- Have valid process variable data for a non-pending proposal, except for the header type field.
+- Process the values ​​and check the system response.
+- Log on to the new dashboard page (TC001). Click the Exit button in the upper right corner of the screen. Expected results: The user can exit the system without errors or impediments. After exiting, the window should display the initial authentication screen. If there are pending or ongoing activities, the user must be able to confirm the exit operation before leaving.
+- Log on to the new dashboard page (TC001) in two different windows with two different users. Have a pending user task to perform. Steps to run: In the first window, select the test task. Select the same task from step 1 in the second window, with the other user logged in. In the first window, complete the test task. In the second window, try to complete the same task. Expected results: The task can be selected without errors or impediments. The task can be terminated without errors or impediments. A message should be displayed stating that the task has already been terminated by another operator.
+- Access the page http://10.36.10.130:7089/dsbpm-3163/#/. Click on the user field and enter kermit. Click on the password field and enter test. Click the Enter button. Expected results: The operator can enter the value correctly. The operator can enter the value correctly. The operator can not authenticate to the page. An alert should be issued with the message User / Password is invalid
+- Log on to the new dashboard page (TC001). Use the same browser window where the login page was accessed. Steps to execute: Open a new tab in the browser and access the page http://10.36.9.9:8000/ppp/#/processes. Expected results: The operator can access the page without errors or impediments. The browser must recognize that the login has already been done previously.
+- Steps for execution: Click on all screens and test as many paths as possible. Expected results: Unravel errors and impediments of the scanned scenarios.
+- The task must be signed by the desired user, without errors or impediments.
+- The access link must be available.
+- Insert an attachment in TIF / TIFF format in the process instance.
+- The task must be completed without error or impediment.
+- The link must be visible and should correctly target to the location containing the preview file, without errors or impediments. The preview file must match the original without distortions or inconsistencies.
+- The file must be attached without error or impediment.
+- The process must be started correctly and contain the uploaded files, without errors, impediments or inconsistencies. The attachment task must be terminated without errors or impediments.
+- Fill in the "Proposal number" field with a valid value.
+- In the "Type" column, select a document type for the displayed attachment.
+- The process must start correctly
+- In the "Document" column, select a document type for the displayed attachment.
+- The attachment task must be completed
+- Fill in the "CPF #" field with a valid value.
+- Fill in the "Identity No." field with a valid value.
+- Fill in the "CNPJ number" field with a valid value.
+- It should be possible to send the selected attachment
+- When clicking on the check box corresponding to the desired document, the possible types of documents should be loaded.
+- The field should allow empty value
+- Must be logged in to upload page
+- When clicking on the check box corresponding to the desired document, the possible types of documents should be loaded.
+- It should be possible to select one of the options listed, without errors or impediments.
+- The field must allow any value
+- Fill in the "Name" field with a valid value.
+- Click "Submit" shortly before the authentication token expires.
+- The operator can enter the value correctly.
+- Have valid credentials to authenticate in the test environment
+- Verify that the link directs to a valid file system path.
+- Delete an entry base64 line that is part of an image
+- Check and validate the correct operation of the imaging of each attachment with viewable format for browsers.
+- Have images in valid and invalid formats for the conversion process
+- Correct attachment preview preview functionality working correctly
+- Perform additional interactions during the test to validate the integrity of the variable.
+- The operator can enter the value correctly.
+- The operator can enter the value correctly.
+- The operator can authenticate to the page
+- Log in to the operator page
+- When accessing the page the window should display the initial authentication screen
+- The operator can not enter the value correctly.
+- Administrator can authenticate on page
+- User can authenticate on page
+- Use the same browser window where the login page was accessed.
+- The browser must recognize that the login has been done before
+- The pending tasks for the logged in operator must be listed on the screen immediately after authentication.
+- Select a pending task
+- The operator can select the task
+- In the first window, select the test task.
+- At the first window, sign the test task.
+- In the second window, try to sign the same task.
+- Verify and validate the correct operation of the ordering by process variable via service.
+- Have valid credentials to authenticate in the test environment
+- The access link must be available.
+- Enter the required input data in the form.
+- After completing the task with the input data properly filled in, check the process variables on the explorer screen
+- It must be possible to enter the required input data in the form
+- The data entered must be included as variables
+- Edit the process form.
+- Create a new task after the process has been published.
+- Check the data displayed on the form
+- The displayed data must be correctly related to the chosen task
+- complete the task.
+- Verify and validate the end-to-end flow of the proposed initial process, including the subprocesses tied to the main process
+- Check control variables at each key point detected in the process
+- Verify and validate that the list of document types has been updated correctly on the Manager screen
+- Have attachments of the specified types to upload.
+- Have tools configured and prepared for REST tests
+- Select a file to upload.
+- In the "Type" column, select the list of document types.
+- A system window should be displayed to choose the desired file
+- Select a file to upload.
+- enter the desired value in the field "Proposal number"
+- When clicking on the check box corresponding to the desired document, the possible types of documents should be loaded.
+- The process must start correctly
+- Select a file.
+- The system must process the file correctly
+- The data for each proposal must be retrieved from the variables in the tender dossier. You must generate one EDI for each proposal without any pending and one EDI with multiple proposals for pending proposals.
+- Have valid and invalid input data to popularly represent process variables.
+- Verify and validate that the files sent by the CASP portal generate link attachments correctly
+- Verify that the attachment type matches the mimetype of the uploaded file.
+- Verify that the classification engine variable corresponds to the document type sent by the portal interface
+- send files through the CASP portal
+- generate your respective link attachment
+- The process must start correctly and contain the uploaded files
+- Attach a valid logical data file containing a proposal
+- The system must correctly process the file, creating a process for each proposal submitted and extracting the data of each proposal to compose variables in the corresponding process.
+- Validate if the product correctly creates the processes from the input proposal file.
+- Access the application server and locate the target folder of the proposal collection
+- The folder must exist and be located correctly.
+- The copy must be done successfully.
+- The change must be made without errors
+- The EDI file should disappear from the folder and the processes corresponding to the proposals must be available in the system.
+- Validate that the system can properly handle the invalid EDI without breaking or locking.
+- Have valid images to send in the requisition

@@ -1,0 +1,103 @@
+- Verify and validate that the system is able to receive proposals in the input .EDI format, inserting the file as a link attachment and creating a process for each proposal found in the attached file. The data of each proposal must be stored as variables of type string in the process corresponding to the proposal.
+- Have input files in specified .EDI format to upload. Consider the files with and without pending and the multiproposed files.
+- System is able to receive proposal files in .EDI format in accordance with the acceptance criteria described in the label abcde ticket
+- Edit the data of the representative integer variables with the set of test values, entering in the record type field the value of number 5
+- Numerical values ​​can be assigned to variables.
+- The system should display an exception with the "error" message for this case. Treatment is not expected.
+- Edit the data of the representative variables of the integer type with the set of test values, inserting in the record type field the value 0
+- Edit the data of the representative variables of the integer type with the set of test values, entering in the record type field the value 00
+- Have valid process variable data in .zip format for a non-pending proposal, except for the send date field.
+- Edit the data of the representative variables in the whole format with the set of test values, inserting in the field of date of shipment the value 160
+- Have valid process variable data for a non-pending proposal, except for the delivery number field.
+- Attach a proposal file with more than 15000 proposals. The system must process the file correctly, creating a process for each proposal submitted and extracting the data of each proposal to compose variables in the corresponding process.
+- A popup with details of the selected task should be displayed, the attachment being arranged in a table with the columns "Name", "Description", "Type" and "Actions". Each row in the table should display only user attachments, and no system attachments should be in the list.
+- A popup with details of the selected task should be displayed, the attachment being arranged in a table with the "Name", "Description" and "Actions" columns. Each row in the table should display only user attachments, and no system attachments should be in the list.
+- The "My Tasks" tab should be loaded without errors or impediments, displaying the task management screen.
+- Preconditions: Read the Losango specification document, available at this link. Post-conditions: Have verified and validated the document that reports all points of doubts of the two teams involved in the analysis (developers and testers), according to the acceptance criteria described in ticket # 3164 of Redmine.
+- The instance of the process you have chosen to test must be in the insertion stage of attachments.
+- Finish the task in the attachment stage.
+- In the task of creating images for preview, access the link (http://abc.com) where the preview file was stored
+- A link (http://nomedolink.com) should be made available for each multipage page. The parent directory of the generated preview files must be checked to ensure the ordering of the files according to the order of the multipage. The links should be visible and should correctly target the location that contains each preview file, without errors or impediments. Each preview file must match the original matching page.
+- The instance of the process you have chosen to test must be in the insertion stage of attachments.
+- Insert attachment in .JPG / JPEG format in specified number process instance.
+- In the task of creating images for preview, check if you end the cycle without performing any image conversion.
+- No image transformation should occur in the current job because the input file already has the extension supported by the preview.
+- Insert an annex in the PNG format in the file number 1 case.
+- Insert an attachment in BMP format in process instance number 1.
+- Insert an attachment in the GIF format in the instance of process number 1.
+- Insert attachment in PDF format in process instance number 1.
+- Insert an attachment in DOC format in the instance of process number 1.
+- The file should not be appended properly and the system should show the corresponding error (file extension invalid / unprocessed).
+- Insert attachment of corrupted .PDF type in the current process instance.
+- Insert attachment of type .PDF with extension modified to format of type .TIFF in the current process instance.
+- Steps to execution: Click the "Exit" button in the upper right corner of the screen. If there is no upload pending or in progress, the user can exit the system without errors or impediments. After exiting, the window should display the initial authentication screen. If there are uploads pending or in progress, the user should be able to confirm the exit operation before leaving.
+- Fill in the "Proposal number" field with a numerical value of more than 10 characters, for example: "15263748930192836475". Click "Select file ...". Select a file of any type with less than 1MB for upload. In the "Type" column, select a document type for the displayed attachment. Click "Submit". Expected result: It must be possible to enter the desired value in the "Proposal No." field. A file explorer window should open on your computer.
+- It should be possible to send the selected attachment of any type. When you finish sending the attachment, the uploaded file should be listed in a table on the upload screen with the following headers / information: Name, Type, Size (file size in Kbytes), Progress, Status, Actions.
+- Click "Select file ..." on the home page.
+- Select a file of type .TIF / TIFF with less than 1MB for upload.
+- Have extension files of type .JPG / JPEG files with less than 1MB to upload.
+- Have extension files of type .PNG with less than 1MB to upload.
+- Select a .ZIP file with less than 1MB for uploading on the home screen.
+- Select a file of type .PDF with exactly 1MB to upload on the home screen.
+- Steps for execution: Fill in the field "Proposal number" with a numeric value. Click "Select file ...". Select a file with less than 1MB for upload. In the "Type" column, select a document type for the displayed attachment. Click "Submit". Repeat steps 1 through 5 for another 99 times. Expected result: It must be possible to enter the desired value in the "Proposal No." field. A file explorer window should open on your computer. It should be possible to send the selected attachment without errors or impediments. When you finish sending the attachment, the uploaded file should be listed in a table on the upload screen with the following headers / information: Name, Type, Size (file size in Kbytes), Progress, Status, Actions.
+- Fill in the "Proposal No." field with a numeric value of more than 10 characters on the dashboard screen, eg "15263748930192836475".
+- Leave the "Proposal number" field empty on the dashboard screen.
+- The sending should not be carried out. A message should be displayed telling the user that the file format is invalid.
+- Select a file in .DOC format whose extension has been changed to .PDF format, less than 1MB, for upload.
+- Click on "Remove all" on the users screen.
+- All documents listed in the upload table in the document screen should be removed.
+- Change the login token timeout to a shorter time, such as 5 minutes.
+- The home screen process must start correctly and contain the uploaded files. The attachment task must be interrupted when the user's authentication token expires and the system must properly treat (with readable messages) session loss in order not to freeze the operation screen.
+- Go to the page http://10.36.10.130:8080/upload/
+- Click on the "user" field and enter "admin" in the authentication screen.
+- Click on the "password" field and insert "test" in the authentication screen.
+- Click the "Enter" button in the authentication screen.
+- The operator can not authenticate to the home page. An alert should be issued with the message "Invalid user / password"
+- Pre-processing of link attachments in compliance with the acceptance criteria available on Redmine ticket # 3256.
+- Verify and validate that the document page upload service is able to produce and execute link attachments in accordance with the acceptance criteria described in Redmine ticket # 3257.
+- Create multiple processes via dashboard page interface
+- Check the date / time of the current task of each open process instance
+- Check the process variable "ActualTimeTime": When checking the ActualTimeTime, the date reported must have changed corresponding to the end date of the last task
+- Click on the "user" field and enter "admin" in the authentication screen.
+- Click on the "password" field and enter "admin" in the authentication screen.
+- Click on the "address" field and enter "street abc" in the address screen.
+- Click the "Exit" button in the upper right corner of any screen of the systems.
+- Go to the page (http://10.36.10.130:7089/tasks)
+- The operator should not be able to access the page related to the URL, being redirected to the login screen.
+- Open a new tab in the browser and access the page (http://10.36.10.130:7089/tasks)
+- The page should display the "My Tasks" screen as the main screen
+- Click on "Finish Task" in the task screen.
+- The task is terminated correctly and the operator must return to the "My Tasks" tab with the same task filter used before the operation on the task screen.
+- Be logged in with the operator credential on the BPO operator page in two different windows with two different users
+- Try to perform any operation on the new dashboard screen after the timeout of the authenticated session.
+- The user can exit the system by clicking the "exit" button on the main screen. After exiting, the window should display the initial authentication screen. If there are pending or ongoing activities, the user must be able to confirm the exit operation before leaving.
+- Click backspace on the backoffice screen.
+- Open a new tab from a link of the current page, the new tab should open in the initial screen, "Adress".
+- Ordering functionality by process variable functioning correctly, according to acceptance criteria described in ticket # 123
+- From the Tasks screen, select a task from the task list.
+- Click the arrow in the upper right corner where the task manipulation options are.
+- Click on "Assign Me" in the task screen.
+- Have a file in the .EDI format of proposals to start the flow in the proposals screen.
+- Be logged in to the URL (http://10.36.10.130:7089/authenticate) with login / agent / agent password, operator credentials, and copy the authentication token to execute the other requests
+- Fill in the "Proposal No." field with a numerical value above 9 characters, for example: "15263748930192836475".
+- Fill in the "Name" field with a literal value longer than 10 characters, eg "abcdefghijklmnopqrstu".
+- The updated list of document types containing the following options should be displayed: CD / CCB (001), CCB back (001v), PC (002)
+- In the "Type" column, select the CD / CCB document type (001) for the displayed attachment of the .PNG format.
+- Via REST with the following service URL: (http://10.36.10.130:7089/runtime/process-instances/420000/attachments.) Create a registration request on the registration screen.
+- Send the selected attachment, without errors or impediments. When you finish sending the attachment, the uploaded file should be listed in a table on the upload screen with the following headers / information: Name, Type, Size (file size in Kbytes), Progress, Status, Actions.
+- The file must be downloaded without errors or impediments. The file name must be in the specified format.
+- In the "Type" column, select the back side CCB document type (033v) for the attachment displayed on the document screen.
+- In the "Type" column, select the Lender Insurance document type (003) for the attachment displayed on the document screen.
+- Verify and validate that the system is able to receive proposals in the .EDI format of the input, inserting the file as a link attachment and creating a process for each proposal found in the attached file. The data of each proposal must be stored as variables in the process corresponding to the proposal.
+- receive proposal files in .EDI format according to the acceptance criteria described in the ticket without displaying error messages.
+- Attach a logical data file in .ZIP format containing a proposal via "attachment" in the proposal screen.
+- Attach a proposal file with more than 15000 proposals and click finish. Verify that the success message was displayed on the proposal screen.
+- Preconditions: Have files in the format specified for upload, between images (.TIF, .JPG, .PNG) and / or .PDF
+- Attach extension files in .TIF / TIFF format that are singlepage with less than 1MB to upload
+- It should be possible to send the selected attachment in .MP4 format on the upload screen.
+- Attach extension files in .JPG / JPEG format with more than 3MB to upload on the upload screen
+- Attach extension files in .JPG / JPEG format with less than 7MB to upload to the upload screen.
+- Attach extension files in .TIFF format with less than 7MB to upload on the upload screen
+- Attach extension files in .GIF format with less than 7MB to upload on the upload screen
+- If there is no pending upload on the document end screen, the user can exit the system by clicking the "exit" button. After exiting, the window should display the initial authentication screen.
+- Change the date / time of the system to a day ahead at 22:58. When given 23h, check: If the .EDI file disappeared from the folder

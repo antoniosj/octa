@@ -1,0 +1,113 @@
+- Check and validate that the system is able to receive proposals in EDI input format, inserting the file as a link attachment and creating a process for each proposal found in the attached file. The data of each proposal must be stored as variables in the process corresponding to the proposal.
+- Have input files in the specified EDI format to upload. Consider the files with and without pending and the multiproposed files.
+- System is able to receive proposal files in incoming EDI format according to the acceptance criteria described in the ticket
+- Edit the data of the representative variables with the set of test values, inserting in the record type field the value 5
+- The values ​​can be assigned to the variables, without errors or impediments.
+- The system should throw an exception for this case. Treatment is not expected.
+- Edit the data of the representative variables with the set of test values, inserting in the record type field the value 0
+- Edit the data of the representative variables with the set of test values, entering in the record type field the value 00
+- Have valid process variable data for a non-pending proposal, except for the send date field.
+- Edit the data of the representative variables with the set of test values, inserting in the date field of sending the value 160
+- Have valid process variable data for a non-pending proposal, except for the delivery number field.
+- Attach a proposal file with more than 15000 proposals. The system must process the file correctly, creating a process for each proposal submitted and extracting the data of each proposal to compose variables in the corresponding process.
+- Click on the user field and enter kermit. Click on the password field and enter kermit. Click the Enter button. The operator can enter the value correctly. The operator can enter the value correctly. The operator can authenticate to the page, without errors or impediments.
+- Not logged in to the new dashboard page. Steps for execution: Access the http://1.1.1.1/processes page. Expected results: The operator should not be able to access the page related to the URL and be redirected to the login screen.
+- Log in to the new dashboard page (TC001). Have lost the authenticated session timeout. Steps to run: Attempt to perform any operation on the new dashboard after the timeout of the authenticated session. Click on the user field and enter kermit. Click on the password field and enter kermit. Click the Enter button. Expected results: The operation is not performed and a re-authentication popup is displayed on the screen. The operator can enter the value correctly. The operator can authenticate to the page, without errors or impediments.
+- Steps to execution: Click the Exit button in the upper right corner of the screen. Expected results: The user can exit the system without errors or impediments. After exiting, the window should display the initial authentication screen. If there are pending or ongoing activities, the user must be able to confirm the exit operation before leaving.
+- Preconditions: Log in to the new dashboard page (TC001). Have lost the authenticated session timeout. Steps to run: Attempt to perform any operation on the new dashboard after the timeout of the authenticated session. Click on the user field and enter kermit. Click on the password field and enter test. Click the Enter button. Expected results: The operation is not performed and a re-authentication popup is displayed on the screen. The operator can enter the value correctly. The operator can not authenticate to the page. An alert should be issued with the message User / Password is invalid.
+- Steps to run: Disable the computer's network connection or pull the network cable. Expected Results: If there are pending or ongoing activities, you should not miss anything you have done so far. The screen should not stop at any operation when the network is connected again. Any interaction with the interface should bring a message indicating that the service is unavailable.
+- Steps to execute: To create the process instance, perform in Postman a POST with the URL http://10.36.10.130:7089/service/runtime/process-instances and the following parameters: user, task, id, values. Expected result: The process must be instantiated without errors or impediments. The ID of the current task task of the instantiated process must be returned, without errors or impediments. The task must be signed by the desired user, without errors or impediments. The user variable must be created without errors or impediments. The "Instances" tab should be loaded without errors or impediments, displaying the list of instantiated processes. A popup with details of the selected process instance should be displayed. The "Variables" section should display two columns, Name and Value, for each result row. Each line should display only one user variable, and no system variable should be in the list. The user variable created in step 4 should not be present in the displayed list.
+- A popup with details of the selected task should be displayed, the attachment being arranged in a table with the "Name", "Description", "Type" and "Actions" columns. Each row in the table should display only user attachments, and no system attachments should be in the list.
+- A popup with details of the selected task should be displayed, the attachment being arranged in a table with the "Name", "Description" and "Actions" columns. Each row in the table should display only user attachments, and no system attachments should be in the list.
+- The "My Tasks" tab should be loaded without errors or impediments, displaying the task management screen.
+- Preconditions: Read the Losango specification document, available at this link. Post-conditions: Have verified and validated the document that reports all points of doubts of the two teams involved in the analysis (developers and testers), according to the acceptance criteria described in ticket # 3164 of Redmine.
+- The instance of the process you have chosen to test must be in the insertion stage of attachments.
+- Finish the attachment task.
+- In the task of creating images for preview, access the link where the preview file was stored
+- A link must be made available to each page of the multipage. The parent directory of the generated preview files must be checked to ensure the ordering of the files according to the order of the multipage. The links should be visible and should correctly target the location that contains each preview file, without errors or impediments. Each preview file must match the original matching page, without any distortions or inconsistencies.
+- The instance of the process you have chosen to test must be in the insertion stage of attachments.
+- Insert an attachment in JPG / JPEG format in the process instance.
+- In the task of creating images for preview, verify that it finishes without performing any conversion.
+- No image transformation should occur because the input file already has the extension supported by the preview.
+- Insert an annex in PNG format in the case file.
+- Insert an attachment in BMP format in the process instance.
+- Insert an attachment in the GIF format in the process instance.
+- Insert an attachment in PDF format in the process instance.
+- Insert an attachment in DOC format in the instance of the process.
+- The file should not be appended properly and the system should show the corresponding error (file extension invalid / unprocessed).
+- Insert corrupted attachment in the process instance.
+- Insert PDF attachment with modified extension to TIFF in the process instance.
+- Steps to execution: Click the "Exit" button in the upper right corner of the screen. If there is no upload pending or in progress, the user can exit the system without errors or impediments. After exiting, the window should display the initial authentication screen. If there are uploads pending or in progress, the user should be able to confirm the exit operation before leaving.
+- Fill in the "Proposal number" field with a valid value longer than 10 characters, for example: "15263748930192836475". Click "Select file ...". Select a file with less than 1MB for upload. In the "Type" column, select a document type for the displayed attachment. Click "Submit". Expected Result: It must be possible to enter the desired value in the "Proposal No." field, without errors or impediments. It should open a file explorer window of the computer, without errors or impediments.
+- It must be possible to send the selected attachment without errors or impediments. When you finish sending the attachment, the uploaded file should be listed in a table on the upload screen with the following headers / information: Name, Type, Size (file size in Kbytes), Progress, Status, Actions.
+- Click on "Select file ...".
+- Select a TIF / TIFF file with less than 1MB for upload.
+- Have JPG / JPEG extension files with less than 1MB to upload.
+- Have PNG extension files with less than 1MB to upload.
+- Select a ZIP file with less than 1MB for upload.
+- Select a PDF file with exactly 1MB for upload.
+- Steps for execution: Fill in the "Proposal number" field with a valid value. Click "Select file ...". Select a file with less than 1MB for upload. In the "Type" column, select a document type for the displayed attachment. Click "Submit". Repeat steps 1 through 5 for another 99 times. Expected Result: It must be possible to enter the desired value in the "Proposal No." field, without errors or impediments. It should open a file explorer window of the computer, without errors or impediments. It should be possible to send the selected attachment without errors or impediments. When you finish sending the attachment, the uploaded file should be listed in a table on the upload screen with the following headers / information: Name, Type, Size (file size in Kbytes), Progress, Status, Actions.
+- Fill in the "Proposal number" field with a valid value longer than 10 characters, for example: "15263748930192836475".
+- Leave the "Proposal number" field empty.
+- The sending should not be carried out. A message should be displayed telling the user that the file format is invalid.
+- Select a DOC file whose extension has been changed to PDF, less than 1MB, for upload.
+- Click on "Remove all".
+- All documents listed in the upload table should be removed, without errors or impediments.
+- Change the token timeout to a shorter time, such as 5 minutes.
+- The process must be started correctly and contain the uploaded files, without errors, impediments or inconsistencies. The attachment task must be interrupted when the user's authentication token expires and the system must properly treat (with readable messages) session loss in order not to freeze the operation screen.
+- Go to the page http://10.36.10.130:8080/upload/
+- Click on the "user" field and enter "admin".
+- Click on the "password" field and enter "test".
+- Click the "Enter" button.
+- The operator can not authenticate to the page. An alert should be issued with the message "Invalid user / password"
+- Pre-processing link attachments without errors or impediments and in compliance with the acceptance criteria available in Redmine ticket # 3256.
+- Verify and validate that the upload service is capable of producing and executing link attachments in accordance with the acceptance criteria described in Redmine ticket # 3257.
+- Create multiple processes via DSBPM dashboard interface
+- Check the date / time of the current task of each open process instance
+- Recheck process variable "ActualTimeTime": When checking the ActualTimeTime again, the date reported must have changed corresponding to the end date of the last task
+- Click on the "user" field and enter "admin".
+- Click on the "password" field and enter "admin".
+- The operator can access the page without errors or impediments.
+- Click on the "address" field and enter "street abc".
+- Click the "Exit" button in the upper right corner of the screen.
+- Access the page http://10.36.10.130:7089/tasks
+- The operator should not be able to access the page related to the URL, being redirected to the login screen.
+- Open a new tab in the browser and access the page http://10.36.10.130:7089/tasks
+- The page should display the "My Tasks" screen as the main screen
+- Click on "Finish Task".
+- The task is completed correctly and the operator must return to the "My Tasks" tab with the same task filter used before the operation.
+- Be logged into the BPO operator page in two different windows with two different users
+- Have lost the authenticated session timeout.
+- Try to perform any operation on the new dashboard after the timeout of the authenticated session.
+- The user can exit the system without errors or impediments. After exiting, the window should display the initial authentication screen. If there are pending or ongoing activities, the user must be able to confirm the exit operation before leaving.
+- Click on backspace.
+- Open a new tab from a link on the current page
+- The new tab should open in the initial screen, "Adress", without errors or impediments.
+- Sorting functionality by process variable working correctly, according to the acceptance criteria described in the ticket
+- From the Tasks screen, select a task from the task list.
+- Click the arrow in the upper right corner where the task manipulation options are.
+- Click on "Assign Me".
+- Have an EDI file of proposals to start the flow.
+- Be logged in http://10.36.10.130:7089/authenticate URL with login / agent / agent password and copy the authentication token to execute the other requests
+- Fill in the field "Proposal number" with a valid value above 9 characters, for example: "15263748930192836475".
+- Fill in the "Name" field with a valid value longer than 10 characters, eg "abcdefghijklmnopqrstu".
+- The updated list of document types containing the following options should be displayed: CD / CCB (001), CCB back (001v), PC (002)
+- In the "Type" column, select the CD / CCB document type (001) for the displayed attachment.
+- Via REST with the following service URL: http://10.36.10.130:7089/runtime/process-instances/420000/attachments. create a registration request.
+- Send the selected attachment, without errors or impediments. When you finish sending the attachment, the uploaded file should be listed in a table on the upload screen with the following headers / information: Name, Type, Size (file size in Kbytes), Progress, Status, Actions.
+- The file must be downloaded without errors or impediments. The file name must be in the specified format.
+- In the "Type" column, select the CCB document type back (033v) for the displayed attachment.
+- In the "Type" column, select the Lender Insurance document type (003) for the displayed attachment.
+- Check and validate that the system is able to receive proposals in EDI input format, inserting the file as a link attachment and creating a process for each proposal found in the attached file. The data of each proposal must be stored as variables in the process corresponding to the proposal.
+- receive proposal files in incoming EDI format according to the acceptance criteria described in the ticket without displaying error messages.
+- Attach a logical data file in the zip format containing a proposal via dsir-attachment.
+- Attach a proposal file with more than 15000 proposals and click finish. Verify that the success message has been displayed.
+- Preconditions: Have valid files to upload, between images (TIF, JPG, PNG) and / or PDF
+- Attach TIF / TIFF extension files that are singlepage with less than 1MB to upload
+- It should be possible to send the selected attachment in mp4 format, without errors or impediments
+- Attach JPG / JPEG extension files with more than 3MB to upload
+- Attach JPG / JPEG extension files with less than 7MB to upload
+- Attach TIFF extension files with less than 7MB to upload
+- Attach GIF extension files with less than 7MB to upload
+- If there is no upload pending or in progress, the user can exit the system without errors or impediments. After exiting, the window should display the initial authentication screen.
+- Change the date / time of the system to a day ahead at 22:58. After 23h, check: If the EDI file disappeared from the folder
