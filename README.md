@@ -1,6 +1,6 @@
 # OCTA
 
-//TODO --> img aqui <--
+<img src="https://github.com/antoniosj/blog-examples/blob/master/github-images/octa.png?raw=true" align="middle" />
 
 OCTA is a tool for test case documents classification, which aims to improve its quality using Machine Learning and NLP in the context of oracle problem.
 
